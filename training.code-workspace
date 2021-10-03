@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "name": "training",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.fontSize": 18,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.renderWhitespace": "all",
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.probe": ["javascript", "html", "markdown"],
+    "search.exclude": {
+      "**/.git": true,
+      "**/node_modules": true
+    },
+    "git.enabled": false
+  },
+  "extensions": {
+    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+  }
+}
