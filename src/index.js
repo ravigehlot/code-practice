@@ -1,4 +1,5 @@
-import Title from './js/components/Title'
+import './css/styles.css'
+import GridBlocks from './js/components/GridBlocks'
 
-const h1 = document.querySelector('h1')
-h1.textContent = Title.showTitle()
+const gridBlocks = new GridBlocks(9)
+gridBlocks.addBlocks()

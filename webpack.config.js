@@ -27,9 +27,6 @@ const config = {
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
-  transform: {
-    '\\.[jt]sx?$': 'babel-jest',
-  },
   module: {
     rules: [
       {
@@ -38,11 +35,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, 'css-loader'],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [stylesHandler, 'css-loader', 'sass-loader'],
+        use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -59,7 +52,11 @@ module.exports = () => {
   if (isProduction) {
     config.mode = 'production'
 
-    config.plugins.push(new MiniCssExtractPlugin())
+    config.plugins.push(
+      new MiniCssExtractPlugin({
+        filename: 'styles.css',
+      }),
+    )
   } else {
     config.mode = 'development'
   }
