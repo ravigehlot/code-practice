@@ -1,9 +1,9 @@
-import { sum, addOne } from '../src/sum'
+/**
+ * @jest-environment jsdom
+ */
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3)
-})
+import Test from '../src/Test'
 
-test('adds 1 to every iterated item', () => {
-  expect(addOne([1, 2, 3, 4])).toBe([2, 3, 4, 5])
+test('Get class property directly', () => {
+  expect(true).toBe(true)
 })
