@@ -40,6 +40,10 @@
 
 ### Code Editing with VSCode for Workspaces
 
+-   Install Fira Code for pretty fonts and ligatures:
+
+    -   Download the zip file, click on all ttf fonts to install.
+
 -   training.code-workspace using:
 
     -   Recommended Extensions

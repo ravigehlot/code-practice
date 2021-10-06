@@ -6,6 +6,8 @@
     }
   ],
   "settings": {
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "editor.fontSize": 18,
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -16,7 +18,8 @@
     "eslint.probe": ["javascript", "html", "markdown"],
     "search.exclude": {
       "**/.git": true,
-      "**/node_modules": true
+      "**/node_modules": true,
+      "**/dist": true
     },
     "git.enabled": true,
     "files.autoSave": "afterDelay",

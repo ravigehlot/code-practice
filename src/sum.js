@@ -2,4 +2,10 @@ function sum(a, b) {
   return a + b
 }
 
-export default sum
+function addOne(items) {
+  return items.map((val, index, arr) => {
+    val + 1
+  })
+}
+
+export { sum, addOne }
