@@ -27,6 +27,9 @@ const config = {
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
+  transform: {
+    '\\.[jt]sx?$': 'babel-jest',
+  },
   module: {
     rules: [
       {

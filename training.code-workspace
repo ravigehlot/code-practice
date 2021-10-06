@@ -18,9 +18,19 @@
       "**/.git": true,
       "**/node_modules": true
     },
-    "git.enabled": false
+    "git.enabled": true,
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+      "**/.git/": true,
+      "**/node_modules/": true
+    }
   },
+
   "extensions": {
-    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "yzhang.markdown-all-in-one"
+    ]
   }
 }
