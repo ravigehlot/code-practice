@@ -6,6 +6,7 @@
     }
   ],
   "settings": {
+    "workbench.colorTheme": "Solarized Dark",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 18,
@@ -28,7 +29,6 @@
       "**/node_modules/": true
     }
   },
-
   "extensions": {
     "recommendations": [
       "dbaeumer.vscode-eslint",
