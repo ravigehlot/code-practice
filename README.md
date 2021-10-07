@@ -21,6 +21,7 @@
 -   npm i --save-dev eslint
 -   npx eslint --init
 -   .eslintrc.json
+-   Installed plug-in eslint-config-prettier essentially turning off code styling through eslint.
 
 ### Code Styling with Prettier
 

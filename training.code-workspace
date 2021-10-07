@@ -26,17 +26,22 @@
     "files.autoSave": "afterDelay",
     "files.exclude": {
       "**/.git/": true,
-      "**/node_modules/": true
     },
     "typescript.validate.enable": false,
     "javascript.validate.enable": true,
-    "css.lint.unknownAtRules": "ignore"
+    "css.lint.unknownAtRules": "ignore",
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "emmet.showExpandedAbbreviation": "always"
+
   },
   "extensions": {
     "recommendations": [
       "dbaeumer.vscode-eslint",
-      "esbenp.prettier-vscode",
+      "ecmel.vscode-html-css",
       "yzhang.markdown-all-in-one",
+      "esbenp.prettier-vscode",
       "bradlc.vscode-tailwindcss"
     ]
   }
