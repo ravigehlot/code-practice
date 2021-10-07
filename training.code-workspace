@@ -33,8 +33,9 @@
     "emmet.triggerExpansionOnTab": true,
     "emmet.showSuggestionsAsSnippets": true,
     "editor.snippetSuggestions": "top",
-    "emmet.showExpandedAbbreviation": "always"
-
+    "emmet.showExpandedAbbreviation": "always",
+    "npm.autoDetect": "on",
+    "css.validate": false
   },
   "extensions": {
     "recommendations": [
