@@ -40,11 +40,15 @@
   },
   "extensions": {
     "recommendations": [
+      "coenraads.bracket-pair-colorizer",
+      "pranaygp.vscode-css-peek",
       "dbaeumer.vscode-eslint",
-      "ecmel.vscode-html-css",
+      "eamodio.gitlens",
+      "abusaidm.html-snippets",
+      "xabikos.javascriptsnippets",
       "yzhang.markdown-all-in-one",
       "esbenp.prettier-vscode",
-      "bradlc.vscode-tailwindcss"
+      "bradlc.vscode-tailwindcss",
     ]
   }
 }
