@@ -17,6 +17,7 @@ const config = {
   devServer: {
     open: true,
     host: 'localhost',
+    port: 8080,
   },
   optimization: {
     minimizer: [],
@@ -36,25 +37,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [
-          stylesHandler,
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    'autoprefixer',
-                    {
-                      // Options
-                    },
-                  ],
-                ],
-              },
-            },
-          },
-        ],
+        use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -77,6 +60,8 @@ module.exports = () => {
     config.optimization.minimize = true
     config.optimization.minimizer.push('...', new CssMinimizerPlugin())
   } else {
+    config.devtool = 'inline-source-map'
+
     config.mode = 'development'
   }
   return config

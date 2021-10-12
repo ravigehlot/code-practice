@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+    
+  "configurations": [
+      {
+        "name": "Launch: Chrome Debugger",
+        "type": "pwa-chrome",
+        "request": "launch",
+        "url": "http://localhost:8080",
+        "port": 9222,
+        "sourceMaps": true,
+        "preLaunchTask": "Task: Webpack Serve",
+        "webRoot": "${workspaceRoot}",
+        "trace": true,
+        "stopOnEntry": true
+    },
+  ]
+}

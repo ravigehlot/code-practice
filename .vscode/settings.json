@@ -1,11 +1,4 @@
 {
-  "folders": [
-    {
-      "name": "training",
-      "path": "."
-    }
-  ],
-  "settings": {
     "workbench.colorTheme": "Solarized Dark",
     "workbench.editor.showTabs": true,
     "editor.fontFamily": "Fira Code",
@@ -23,6 +16,7 @@
       "**/node_modules": true,
       "**/dist": true
     },
+    "git.autofetch": true,
     "git.enabled": true,
     "files.autoSave": "afterDelay",
     "files.exclude": {
@@ -37,18 +31,4 @@
     "emmet.showExpandedAbbreviation": "always",
     "npm.autoDetect": "on",
     "css.validate": false
-  },
-  "extensions": {
-    "recommendations": [
-      "coenraads.bracket-pair-colorizer",
-      "pranaygp.vscode-css-peek",
-      "dbaeumer.vscode-eslint",
-      "eamodio.gitlens",
-      "abusaidm.html-snippets",
-      "xabikos.javascriptsnippets",
-      "yzhang.markdown-all-in-one",
-      "esbenp.prettier-vscode",
-      "bradlc.vscode-tailwindcss",
-    ]
   }
-}
