@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import GridBlocks from '../src/js/components/GridBlocks'
 
 const totalNumberofBlocks = 2
@@ -10,7 +7,7 @@ test('Object instance is of type GridBlocks', () => {
   expect(instance).toBeInstanceOf(GridBlocks)
 })
 
-test('Check if addBlocks adds blocks to the DOM', () => {
+test('Check if addBlocks adds blocks to the DOM.', () => {
   document.body.innerHTML = `
   <div class="p-8">
     <div class="grid grid-cols-3 gap-4"></div>

@@ -16,7 +16,7 @@
       }
     },
     {
-      "files": "*.{json|html}",
+      "files": "*.{json|html|code-workspace}",
       "options": {
         "tabWidth": 2,
         "singleQuote": false
