@@ -55,3 +55,4 @@
 
 [State of JS](stateofjs.com)
 [State of CSS](stateofcss.com)
+[Type Acquisition](https://www.typescriptlang.org/dt/search?search=)

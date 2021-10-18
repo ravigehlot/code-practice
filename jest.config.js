@@ -16,7 +16,8 @@ const config = {
   coverageReporters: ['text', 'json'], // clover, json, lcov and text
   coverageDirectory: path.resolve(__dirname, 'tests/coverage'),
   coveragePathIgnorePatterns: ['/node_modules/'],
-  setupFiles: [path.resolve(__dirname, 'tests/mocks/browser.js')],
+  setupFiles: [path.resolve(__dirname, 'tests/config/setupFiles.js')],
+  setupFilesAfterEnv: ['jest-extended/all'],
 }
 
 module.exports = config
