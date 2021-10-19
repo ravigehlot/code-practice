@@ -1,9 +1,8 @@
 import Grid from './Grid'
-import FetchAPI from '../utils/FetchAPI'
 
 class GridBlocks extends Grid {
   constructor(total) {
-    super(Grid, FetchAPI)
+    super(Grid)
     this.blockItemClasses = ['bg-gray-300', 'h-12', 'rounded']
     this.perColumn = total
   }
@@ -13,14 +12,10 @@ class GridBlocks extends Grid {
     for (let x = 0; x < this.perColumn; x += 1) {
       const block = document.createElement('div')
       block.classList.add(...this.blockItemClasses)
-      FetchAPI.getData({ newInt: document.createTextNode(data.body) })
+      const newInt = document.createTextNode(x)
       block.appendChild(newInt)
       grid.appendChild(block)
     }
-  }
-
-  getApiData() {
-    return
   }
 }
 
