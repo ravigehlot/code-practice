@@ -1,17 +1,10 @@
-function studyPromise(decision = true, data = {}) {
-  const reasonObj = new Error('There is no name to be returned.')
+export default function promise(decision, data) {
+  const reasonObj = Error('There is no name to be returned.')
 
-  const promise = new Promise((resolve, reject) => {
-    if (decision) resolve(data)
-
-    reject(reasonObj)
-  })
-
-  return promise
+  //return new Promise((resolve, reject) => {
+  //if (decision) resolve(data)
+  //return resolve(data)
+  //reject(reasonObj)
+  //})
+  return new Promise((resolve, reject) => resolve(data))
 }
-
-studyPromise().then((fulfilled) => fulfilled)
-
-studyPromise().catch((error) => error.message)
-
-export default studyPromise

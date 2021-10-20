@@ -1,45 +1,10 @@
-import studyPromise from '../src/js/utils/Promise'
+// __tests__/user-test.js
+jest.mock('./mocks/promise')
 
-const names = {
-  firstName: 'Ravi',
-  lastName: 'Gehlot',
-}
+import getPromise from '../src/js/promise'
 
-const errorMsg = 'There is no name to be returned.'
-const errorObj = new Error(errorMsg)
-
-test('async test .resolves returns the names object.', async () => {
-  jest.fn().mockImplementation(() => Promise.resolve(names))
-  jest.fn().mockResolvedValue(names)
-
-  await expect(studyPromise(true, names)).resolves.toStrictEqual(names)
-})
-
-test('async test .resolves returns an object (the data passed)', async () => {
-  jest.fn().mockImplementation(() => Promise.resolve(names))
-  jest.fn().mockResolvedValue(names)
-
-  await expect(typeof studyPromise(true, names)).toBe('object')
-})
-
-test('async test that .rejects returns an Error object.', async () => {
-  expect.assertions(2)
-
-  jest.fn().mockImplementation(() => Promise.reject(errorObj))
-  jest.fn().mockResolvedValue(errorMsg)
-
-  await studyPromise(false, names).catch((e) => expect(e).toEqual(errorObj))
-
-  await studyPromise(false, names).catch((e) =>
-    expect(e.message).toEqual(errorMsg)
-  )
-})
-
-test('async test rejects returns an Error object', async () => {
+// The assertion for a promise must be returned.
+it('works with promises', () => {
   expect.assertions(1)
-
-  jest.fn().mockImplementation(() => Promise.reject(errorObj))
-  jest.fn().mockResolvedValue(errorObj)
-
-  await studyPromise(false, names).catch((e) => expect(e).toBeInstanceOf(Error))
+  return getPromise(true, {}).then((data) => expect(data).toEqual({}))
 })
