@@ -1,9 +1,10 @@
 // jest.config.js
-// Sync object
+
 /** @type {import('@jest/types').Config.InitialOptions} */
 const path = require('path')
 
 const config = {
+  automock: false, // if true, it might mock Jest's own dependencies.
   displayName: 'training', // label to be printed alongside a test while it is running.
   bail: 0, // stop as soon as a fail is found.
   verbose: false,
@@ -14,9 +15,9 @@ const config = {
   collectCoverageFrom: ['./src/**/*.js'],
   coverageProvider: 'babel',
   coverageReporters: ['text', 'json'], // clover, json, lcov and text
-  coverageDirectory: path.resolve(__dirname, 'tests/coverage'),
+  coverageDirectory: path.resolve(__dirname, '__tests__/coverage'),
   coveragePathIgnorePatterns: ['/node_modules/'],
-  setupFiles: [path.resolve(__dirname, 'tests/config/setupFiles.js')],
+  setupFiles: [path.resolve(__dirname, '__tests__/__config__/setupFiles.js')],
   setupFilesAfterEnv: ['jest-extended/all'],
 }
 
