@@ -56,3 +56,4 @@
 [State of JS](stateofjs.com)
 [State of CSS](stateofcss.com)
 [Web Hypertext Application Technology Working](https://dom.spec.whatwg.org/)
+[Type Acquisition](https://www.typescriptlang.org/dt/search?search=)

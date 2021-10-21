@@ -14,7 +14,11 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.renderWhitespace": "selection",
         "editor.snippetSuggestions": "top",
-        "editor.quickSuggestions": true,
+        "editor.quickSuggestions": {
+          "other": true,
+          "comments": true,
+          "strings": true
+        },
         "emmet.triggerExpansionOnTab": true,
         "emmet.showSuggestionsAsSnippets": true,
         "emmet.showExpandedAbbreviation": "always",
@@ -102,6 +106,7 @@
             "yzhang.markdown-all-in-one",
             "esbenp.prettier-vscode",
             "bradlc.vscode-tailwindcss",
+            "orta.vscode-jest"
         ]
     }
 }

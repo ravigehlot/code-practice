@@ -32,3 +32,5 @@
 
 - window.document
      browser + HTML
+- it() vs test()
+    Both do the same. They exist to offer a familiar way to do the same thing for those coming from other testing frameworks.
