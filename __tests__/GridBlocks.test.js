@@ -1,10 +1,10 @@
-import GridBlocks from '../src/js/components/GridBlocks'
+import gridBlocks from '../src/js/components/gridBlocks'
 
 const totalNumberofBlocks = 2
-const instance = new GridBlocks(totalNumberofBlocks)
+const instance = new gridBlocks(totalNumberofBlocks)
 
 test('Object instance is of type GridBlocks', () => {
-  expect(instance).toBeInstanceOf(GridBlocks)
+  expect(instance).toBeInstanceOf(gridBlocks)
 })
 
 test('Check if addBlocks adds blocks to the DOM.', () => {

@@ -34,3 +34,10 @@
      browser + HTML
 - it() vs test()
     Both do the same. They exist to offer a familiar way to do the same thing for those coming from other testing frameworks.
+
+- When mocking a module or function, there are 2 main things to consider:
+
+    How was the module exported?
+    What do we want the behavior of our mock to be?
+
+-> https://mercedesbernard.com/blog/jest-mocking-strategies

@@ -4,9 +4,10 @@
 const path = require('path')
 
 const config = {
+  displayName: 'training',
   automock: false, // if true, it might mock Jest's own dependencies.
   displayName: 'training', // label to be printed alongside a test while it is running.
-  bail: 0, // stop as soon as a fail is found.
+  bail: true, // stop as soon as a fail is found.
   verbose: false,
   testEnvironment: 'jsdom', // browser testing
   testPathIgnorePatterns: ['/node_modules/'],
@@ -17,7 +18,6 @@ const config = {
   coverageReporters: ['text', 'json'], // clover, json, lcov and text
   coverageDirectory: path.resolve(__dirname, '__tests__/coverage'),
   coveragePathIgnorePatterns: ['/node_modules/'],
-  setupFiles: [path.resolve(__dirname, '__tests__/__config__/setupFiles.js')],
   setupFilesAfterEnv: ['jest-extended/all'],
 }
 

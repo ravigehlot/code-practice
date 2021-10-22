@@ -1,4 +1,4 @@
-import Grid from './Grid'
+import Grid from './grid'
 
 class GridBlocks extends Grid {
   constructor(total) {
