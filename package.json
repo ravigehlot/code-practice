@@ -1,13 +1,18 @@
 {
   "name": "training",
   "version": "1.0.0",
-  "description": "training",
-  "main": "index.js",
+  "description": "A package for learning front-end web development.",
+  "main": "src/index.js",
   "private": true,
   "keywords": [
     "training"
-  ],
-  "author": "RG",
+  ], 
+  "homepage": "https://github.com/ravigehlot/training", 
+  "repository": "GitHub:ravigehlot/training",
+  "author": {
+    "name": "Ravi Gehlot",
+    "email": "ravi@gehlot.net",
+    "url": "https://www.ravigehlot.com/"
   "license": "MIT",
   "scripts": {
     "test": "jest",
@@ -59,5 +64,15 @@
     "webpack": "^5.57.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.3.0"
-  }
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "bugs": "https://github.com/ravigehlot/training/issues"
 }
