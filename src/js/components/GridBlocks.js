@@ -1,8 +1,8 @@
-import Grid from './grid'
+import grid from './grid'
 
-class GridBlocks extends Grid {
+class gridBlocks extends grid {
   constructor(total) {
-    super(Grid)
+    super(grid)
     this.blockItemClasses = ['bg-gray-300', 'h-12', 'rounded']
     this.perColumn = total
   }
@@ -19,4 +19,4 @@ class GridBlocks extends Grid {
   }
 }
 
-export default GridBlocks
+export default gridBlocks

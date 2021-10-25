@@ -76,4 +76,8 @@
 
   In ES7, async and await were introduced as syntactic sugar for Promises in ES6.
 
-  Resource: https://www.digitalocean.com/community/tutorials/understanding-javascript-promises
+  Resource: 
+  - https://www.digitalocean.com/community/tutorials/understanding-javascript-promises
+  - https://learnersbucket.com/tutorials/es6/fat-arrow-function/
+  - https://mercedesbernard.com/blog/jest-mocking-strategies
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
