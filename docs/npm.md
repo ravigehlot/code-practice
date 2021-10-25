@@ -1,8 +1,33 @@
 ## npm
+- Update package.json along with major, minor and patches:
+  - npm -g install npm-check-updates
+  - ncu
+  - ncu --upgrade 
 
-- Check package dependencies
-  - npm list --depth=n
-- 
+ - Update package-lock.json
+   - npm update
+
+ - npm ci (continuos integration)
+
+ - npm install <package> or npm i <package>
+   - It installs it in dependencies
+
+ - npm install --save-dev <package> or npm i -D <package>
+   - It installs it in devDependencies
+
+ - npm install --production
+   - It will NOT install devDependencies, ONLY dependencies.
+
+ - npx
+   - It will let you run code built in Node.js.
+
+ - npx cowsay "Hello"
+   - If the package is not available locally, npx will install it in 
+   - central cache and run it. 
+
+- Remove package from node_modules and update removal in package.json
+ - npm uninstall --save 
+
 - Check what version of the NPM package is locally installed:
   - npm ls --depth=0
 
