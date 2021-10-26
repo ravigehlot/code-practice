@@ -1,13 +1,19 @@
 {
   "name": "training",
   "version": "1.0.0",
-  "description": "training",
-  "main": "index.js",
+  "description": "A package for learning front-end web development.",
+  "main": "src/index.js",
   "private": true,
   "keywords": [
     "training"
-  ],
-  "author": "Ravi Gehlot",
+  ], 
+  "homepage": "https://github.com/ravigehlot/training", 
+  "repository": "GitHub:ravigehlot/training",
+  "author": {
+    "name": "Ravi Gehlot",
+    "email": "ravi@gehlot.net",
+    "url": "https://www.ravigehlot.com/"
+  },
   "license": "MIT",
   "scripts": {
     "test": "jest",
@@ -41,38 +47,52 @@
     "@comment git:unstage:hardcommit [commitHash]":"Discards all history and goes back to the specified commit.",
     "git:unstage:hardcommit": "git reset --hard",
     "@comment git:rm:file [fileName]":"Deletes the file from your working directory and stages the deletion.",
-    "git:rm:file": "git reset --hard"
+    "git:rm:file": "git reset --hard",
+    "@comments npm outdated": "lists any outdated packages",
+    "view:pkg:info": "npm view",
+    "ncu:upgrade:list": "ncu",
+    "ncu:upgrade:all": "ncu --upgrade"
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^2.2.17"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
+    "@babel/core": "^7.15.8",
     "@babel/plugin-transform-modules-commonjs": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-env": "^7.15.8",
     "@types/jest": "^27.0.2",
-    "@webpack-cli/generators": "^2.3.0",
+    "@webpack-cli/generators": "^2.4.1",
     "autoprefixer": "^10.3.7",
-    "babel-jest": "^27.2.4",
-    "babel-loader": "^8.2.2",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.3.0",
+    "css-loader": "^6.4.0",
     "css-minimizer-webpack-plugin": "^3.1.1",
-    "eslint": "^7.32.0",
+    "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jest": "^24.5.2",
-    "html-webpack-plugin": "^5.3.2",
-    "jest": "^27.2.4",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.3.1",
     "jest-extended": "^1.1.0",
-    "mini-css-extract-plugin": "^2.4.1",
-    "postcss": "^8.3.9",
-    "postcss-loader": "^6.1.1",
+    "mini-css-extract-plugin": "^2.4.3",
+    "postcss": "^8.3.11",
+    "postcss-loader": "^6.2.0",
     "prettier": "^2.4.1",
-    "style-loader": "^3.3.0",
-    "webpack": "^5.57.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.3.0"
-  }
+    "style-loader": "^3.3.1",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "engines": {
+    "node": ">= 16.9.1",
+    "npm": ">= 8.1.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "bugs": "https://github.com/ravigehlot/training/issues"
 }

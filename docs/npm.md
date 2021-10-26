@@ -1,8 +1,33 @@
 ## npm
+- Update package.json along with major, minor and patches:
+  - npm -g install npm-check-updates
+  - ncu
+  - ncu --upgrade 
 
-- Check package dependencies
-  - npm list --depth=n
-- 
+ - Update package-lock.json
+   - npm update
+
+ - npm ci (continuos integration)
+
+ - npm install <package> or npm i <package>
+   - It installs it in dependencies
+
+ - npm install --save-dev <package> or npm i -D <package>
+   - It installs it in devDependencies
+
+ - npm install --production
+   - It will NOT install devDependencies, ONLY dependencies.
+
+ - npx
+   - It will let you run code built in Node.js.
+
+ - npx cowsay "Hello"
+   - If the package is not available locally, npx will install it in 
+   - central cache and run it. 
+
+- Remove package from node_modules and update removal in package.json
+ - npm uninstall --save 
+
 - Check what version of the NPM package is locally installed:
   - npm ls --depth=0
 
@@ -20,5 +45,7 @@
     - and ./node_modules/
 
 - package.json
-  - Install patch version:
-    - So if you see ~1.0.2 it means to install version 1.0.2 or the latest patch version such as 1.0.4
+  - That symbol specifies(^, ~) which updates your package accepts, from that dependency.
+    Given that using semver (semantic versioning) all versions have 3 digits, the first being the major release, the second the minor release and the third is the patch release.
+    You can combine most of the versions in ranges, like this: 1.0.0 || >=1.1.0 <1.2.0, to either use 1.0.0 or one release from 1.1.0 up, but lower than 1.2.0.
+The goal of package-lock.json file is to keep track of the exact version of every package that is installed so that a product is 100% reproducible in the same way even if packages are updated by their maintainers.

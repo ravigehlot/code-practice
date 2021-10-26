@@ -1,6 +1,7 @@
 /**
+ * Named function.
  *
- * @returns
+ * @returns string
  */
 export const example = () => {
   return 'real value'
