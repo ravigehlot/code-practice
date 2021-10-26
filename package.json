@@ -7,7 +7,7 @@
   "keywords": [
     "training"
   ],
-  "author": "RG",
+  "author": "Ravi Gehlot",
   "license": "MIT",
   "scripts": {
     "test": "jest",
@@ -26,7 +26,22 @@
     "build:dev": "webpack --mode=development --node-env=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "git:update:name": "git config --global user.name",
+    "git:update:email": "git config --global user.email",
+    "git:del:local": "git branch -d",
+    "git:del:remote": "git push origin --delete",
+    "git:log:graph": "git log --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit",
+    "@comment git:undo [commitHash]": "Undo commits, creates a new commit without deleting the older one",
+    "git:undo": "git revert",
+    "@comment git:unstage:file [fileName]":"Unstages the file, but it preserves the file contents.",
+    "git:unstage:file": "git reset",
+    "@comment git:unstage:commit [commitHash]":"Undoes all the commits after the specified commit and preserves the changes locally.",
+    "git:unstage:commit": "git reset",
+    "@comment git:unstage:hardcommit [commitHash]":"Discards all history and goes back to the specified commit.",
+    "git:unstage:hardcommit": "git reset --hard",
+    "@comment git:rm:file [fileName]":"Deletes the file from your working directory and stages the deletion.",
+    "git:rm:file": "git reset --hard"
   },
   "dependencies": {
     "lodash": "^4.17.21",
