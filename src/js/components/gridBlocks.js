@@ -1,6 +1,6 @@
 import grid from './grid'
 
-class gridBlocks extends Grid {
+class gridBlocks extends grid {
   constructor(total) {
     super(grid)
     this.blockItemClasses = ['bg-gray-300', 'h-12', 'rounded']
