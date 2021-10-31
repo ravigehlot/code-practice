@@ -41,3 +41,8 @@
     What do we want the behavior of our mock to be?
 
 -> https://mercedesbernard.com/blog/jest-mocking-strategies
+
+
+expect().toBe() : It performs its test with === which means that when used as expect(foo).toBe(true), it will pass only if foo actually has the value true. Truthy values won't make the test pass.
+
+expect().toBeTruthy() : A value is truthy if the coercion of this value to a boolean yields the value true. 

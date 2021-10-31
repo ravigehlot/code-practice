@@ -16,7 +16,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --colors --expand --logHeapUsage --verbose",
+    "test:list:all": "jest --listTests",
+    "test:clear:cache": "jest --clearCache",
     "test:watch:all": "jest --watchAll",
     "test:watch:this": "jest --watch",
     "test:these": "jest --findRelatedTests",

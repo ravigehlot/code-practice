@@ -81,3 +81,40 @@
   - https://learnersbucket.com/tutorials/es6/fat-arrow-function/
   - https://mercedesbernard.com/blog/jest-mocking-strategies
   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+Coercion
+
+The operation !! tests for truthiness by coercing the value passed to expect to a boolean. Note that contrarily to what the currently accepted answer implies, == true is not a correct test for truthiness. You'll get funny things like
+
+> "hello" == true
+false
+> "" == true
+false
+> [] == true
+false
+> [1, 2, 3] == true
+false
+
+> !!"hello"
+true
+> !!""
+false
+> !![1, 2, 3]
+true
+> !![] 
+true
+
+
+ value     │  !value  │  !!value
+━━━━━━━━━━━┿━━━━━━━━━━┿━━━━━━━━━━━
+ false     │ ✔ true   │   false
+ true      │   false  │ ✔ true
+ null      │ ✔ true   │   false
+ undefined │ ✔ true   │   false
+ 0         │ ✔ true   │   false
+ -0        │ ✔ true   │   false
+ 1         │   false  │ ✔ true
+ -5        │   false  │ ✔ true
+ NaN       │ ✔ true   │   false
+ ''        │ ✔ true   │   false
+ 'hello'   │   false  │ ✔ true

@@ -1,4 +1,4 @@
-import gridBlocks from '../src/js/components/gridBlocks'
+import gridBlocks from '../../src/js/components/gridBlocks'
 
 const totalNumberofBlocks = 2
 const instance = new gridBlocks(totalNumberofBlocks)
