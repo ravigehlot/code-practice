@@ -61,7 +61,6 @@
     "ncu:upgrade:all": "ncu --upgrade"
   },
   "dependencies": {
-    "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
     "tailwindcss": "^2.2.17"
   },

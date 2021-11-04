@@ -118,3 +118,49 @@ true
  NaN       │ ✔ true   │   false
  ''        │ ✔ true   │   false
  'hello'   │   false  │ ✔ true
+
+ CommonJS vs ES Modules
+
+ Browsers do not support CommonJS out of the box. It can be bundles with the app.
+ Browsers do support ES Modules. No need to for additional packages.
+ The newer version of NodeJS supports both CommonJS and ES Modules:
+  - ES Modules: use extension .mjs or add type="module" in package.json
+  - CommonJS: use extension .js or add type="commonjs" in package.json
+ NodeJS is moving the ESM path, has it as stable. However, many packages are still
+  written in CommonJS. Do not mix the two. Use one or the other. Most NodeJS packages
+  such as Jest, Webpack were written in CommonJS.
+ One major difference between CommonJS and ESM is that ESM is asynchronous while
+  CommonJS is synchronous. You cannot return a Promise or callback with CommonJS.
+ Packages can be written in either CommonJS or ES Modules.
+
+* CommonJS:
+  
+  - first.js
+
+  let test = () => {
+      return 'something'
+  }
+
+  module.exports = test
+
+  - second.js
+
+  const first = require('./test.js')
+
+  first()
+
+* ESM: 
+
+  - first.js
+
+  let test = () => {
+      return 'something'
+  }
+
+  export default test
+
+  - second.js
+
+  import first from './first.js'
+
+  first()
