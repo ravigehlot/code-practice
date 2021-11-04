@@ -1,4 +1,6 @@
 const path = require('path')
+const webpack = require('webpack')
+const env = require('dotenv').config()
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -28,6 +30,9 @@ const config = {
       minify: isProduction === true,
     }),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      env: env,
+    }),
   ],
   module: {
     rules: [
@@ -64,5 +69,6 @@ module.exports = () => {
 
     config.mode = 'development'
   }
+
   return config
 }
