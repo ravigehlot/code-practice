@@ -1,5 +1,3 @@
-import fetch from 'node-fetch'
-
 let fetchAPI = () => {
   const headers = [
     ['Host', process.env.CITYOFNEWYORKUS_HOST],

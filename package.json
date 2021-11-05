@@ -4,7 +4,6 @@
   "description": "A package for learning front-end web development.",
   "main": "src/index.js",
   "private": true,
-  "type": "module",
   "keywords": [
     "training"
   ],
