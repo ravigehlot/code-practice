@@ -1,6 +1,5 @@
 const path = require('path')
-const webpack = require('webpack')
-const env = require('dotenv').config()
+const Dotenv = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -12,27 +11,39 @@ const stylesHandler = isProduction
   : 'style-loader'
 
 const config = {
+  target: 'web',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
+    sourceMapFilename: './dist/[name].js.map',
+    publicPath: 'auto',
   },
   devServer: {
-    open: true,
+    open: false,
     host: 'localhost',
     port: 8080,
+    static: {
+      directory: path.resolve(__dirname, './asset/'),
+      publicPath: '/',
+    },
+    devMiddleware: {
+      index: true,
+      publicPath: '/',
+      serverSideRender: true,
+      writeToDisk: true,
+    },
   },
   optimization: {
     minimizer: [],
   },
   plugins: [
     new HtmlWebpackPlugin({
+      
       template: 'index.html',
       minify: isProduction === true,
     }),
     new CleanWebpackPlugin(),
-    new webpack.DefinePlugin({
-      env: env,
-    }),
+    new Dotenv(),
   ],
   module: {
     rules: [
@@ -65,9 +76,7 @@ module.exports = () => {
     config.optimization.minimize = true
     config.optimization.minimizer.push('...', new CssMinimizerPlugin())
   } else {
-    config.devtool = 'inline-source-map'
-
-    config.mode = 'development'
+    ;(config.devtool = 'source-map'), (config.mode = 'development')
   }
 
   return config

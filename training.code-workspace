@@ -48,20 +48,39 @@
     "launch": {
         "version": "0.2.0",
         "configurations": [
-            {
-              "name": "Launch: Chrome Debugger",
-              "type": "pwa-chrome",
-              "request": "launch",
-              "url": "http://localhost:8080",
-              "port": 9222,
-              "sourceMaps": true,
-              "preLaunchTask": "Task: Webpack Serve",
-              "webRoot": "${workspaceRoot}",
-              "trace": true,
-              "stopOnEntry": true
+          {
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Debug: Edge",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/dist",
+            "sourceMaps": true,
+            "trace": true,
+            "port": 9222,
+            "resolveSourceMapLocations": [
+              "${workspaceFolder}/",
+              "!/node_modules/**"
+          ],
+            "preLaunchTask": "Task: Webpack Serve",
+            "stopOnEntry": true,
           },
+          {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Debug: Chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/dist",
+            "sourceMaps": true,
+            "trace": true,
+            "port": 9222,
+            "resolveSourceMapLocations": [
+              "${workspaceFolder}/",
+              "!/node_modules/**"
+          ],
+            "preLaunchTask": "Task: Webpack Serve",
+            "stopOnEntry": true,
+          }
         ],
-        "compounds": []
     },
     "tasks": {
         "version": "2.0.0",
@@ -75,7 +94,7 @@
             "problemMatcher": {
               "owner": "webpack",
               "severity": "error",
-              "fileLocation": "absolute",
+              "fileLocation": "autoDetect",
               "pattern": [
                 {
                   "regexp": "ERROR in [^ ]* (.*):(.*):(.*)",
@@ -104,10 +123,10 @@
             "eamodio.gitlens",
             "abusaidm.html-snippets",
             "xabikos.javascriptsnippets",
+            "orta.vscode-jest",
             "yzhang.markdown-all-in-one",
             "esbenp.prettier-vscode",
             "bradlc.vscode-tailwindcss",
-            "orta.vscode-jest"
         ]
     }
 }
