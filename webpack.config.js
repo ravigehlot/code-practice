@@ -17,7 +17,7 @@ const config = {
   devServer: {
     open: true,
     host: 'localhost',
-    port: 8080,
+    port: 'auto',
   },
   optimization: {
     minimizer: [],
@@ -33,6 +33,7 @@ const config = {
     rules: [
       {
         test: /\.(js)$/i,
+        exclude: /node_modules/,
         loader: 'babel-loader',
       },
       {
